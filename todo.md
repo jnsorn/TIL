@@ -9,7 +9,7 @@
   - MHA 구조
   
 ### 영상
-- [ ] 그런 REST API로 괜찮은가? - 2017 Naver D2 이응준님
+- [x] 그런 REST API로 괜찮은가? - 2017 Naver D2 이응준님
   [(링크)](https://www.youtube.com/watch?v=RP_f5dMoHFc&t=1046s&ab_channel=naverd2)
 - [ ] 무엇을 테스트할 것인가? 어떻게 테스트할 것인가? - 스프링캠프 2019 권용근님
   [(링크)](https://www.youtube.com/watch?v=YdtknE_yPk4&ab_channel=springcamp.io)
