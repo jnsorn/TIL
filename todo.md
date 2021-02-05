@@ -4,7 +4,7 @@
 - [ ] @Transactional(readOnly=true)
     - JPA에서 성능에 미치는 영향
 - [ ] 레코드 주소를 사용할 때의 인덱스 크기 [(링크)](https://github.com/gazi-gazi/real-mysql/issues/38)
-- [ ] 오픈소스 DBMS로 고가용성 확보하기 - MySQL 이중화 구성 방안 
+- [x] 오픈소스 DBMS로 고가용성 확보하기 - MySQL 이중화 구성 방안 
   [(링크)](https://www.2e.co.kr/news/articleView.html?idxno=204172)
   - MHA 구조
   
