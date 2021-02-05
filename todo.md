@@ -1,14 +1,16 @@
 > _오늘 뭐 공부하지?_
 
 ### 부채
+
 - [ ] @Transactional(readOnly=true)
     - JPA에서 성능에 미치는 영향
 - [ ] 레코드 주소를 사용할 때의 인덱스 크기 [(링크)](https://github.com/gazi-gazi/real-mysql/issues/38)
-- [x] 오픈소스 DBMS로 고가용성 확보하기 - MySQL 이중화 구성 방안 
+- [x] 오픈소스 DBMS로 고가용성 확보하기 - MySQL 이중화 구성 방안
   [(링크)](https://www.2e.co.kr/news/articleView.html?idxno=204172)
-  - MHA 구조
-  
+    - MHA 구조
+
 ### 영상
+
 - [x] 그런 REST API로 괜찮은가? - 2017 Naver D2 이응준님
   [(링크)](https://www.youtube.com/watch?v=RP_f5dMoHFc&t=1046s&ab_channel=naverd2)
 - [ ] 무엇을 테스트할 것인가? 어떻게 테스트할 것인가? - 스프링캠프 2019 권용근님
@@ -21,7 +23,5 @@
   [(링크)](https://www.youtube.com/watch?v=zMAX7g6rO_Y&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9CTech)
 - [ ] 배달의민족 마이크로서비스 여행기 - 우아콘 2020 김영한님
   [(링크)](https://www.youtube.com/watch?v=BnS6343GTkY&t=166s&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9CTech)
-
-### 포스팅
-- [ ] 스프링 배치 공식 레퍼런스 한글 번역
-  [(링크)](https://godekdls.github.io/Spring%20Batch/contents/)
+- [ ] 우아한객체지향 - 우아한테크세미나 조영호님
+  [(링크)](https://www.youtube.com/watch?v=dJ5C4qRqAgA&a)
