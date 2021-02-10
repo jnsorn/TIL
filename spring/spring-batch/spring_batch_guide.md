@@ -27,5 +27,15 @@
 - Quartz : 스케줄러
 - Batch : 대용량 배치 처리에 대한 기능 지원
 - 따라서 둘이 조합해서 많이 사용함
-- 정해진 스케줄맏다 Quartz가 Spring Batch를 실행하는 구조
+- 정해진 스케줄마다 Quartz가 Spring Batch를 실행하는 구조
+
+> 2. Spring Batch 가이드 - Batch Job 실행해보기 [(기억보단 기록을)](https://jojoldu.tistory.com/325?category=902551)
+
+- Spring Batch에서 Job은 하나의 배치 작업 단위를 이야기 함
+- Job은 여러개의 Step으로 이루어져있음
+- Step은 Tasklet 혹은 Reader&Processor&Writer 묶음이 존재
+    - Tasklet : Spring MVC의 @Component, @Bean과 비슷한 역할이라고 생각해도 됨,
+    명확한 역할은 없지만, 개발자가 지정한 커스텀한 기능을 위한 단위로 보기
+      
+[Job](../../images/spring-batch/job.png)
 
