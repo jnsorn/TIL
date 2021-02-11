@@ -35,7 +35,22 @@
 - Job은 여러개의 Step으로 이루어져있음
 - Step은 Tasklet 혹은 Reader&Processor&Writer 묶음이 존재
     - Tasklet : Spring MVC의 @Component, @Bean과 비슷한 역할이라고 생각해도 됨,
-    명확한 역할은 없지만, 개발자가 지정한 커스텀한 기능을 위한 단위로 보기
+    명확한 역할은 없지만 개발자가 지정한 커스텀한 기능을 위한 단위로 보면 됨 (아직 이해 안감)
       
 [Job](../../images/spring-batch/job.png)
+
+## Spring Batch의 메타 데이터
+
+- 이전에 실행한 Job이 어떤 것들이 있는지
+- 최근 실패한 Batch Parameter가 어떤 것들이 있고, 성공한 Job은 어떤 것들이 있는지
+- 다시 실행한다면 어디서부터 시작하면 될 지
+- 어떤 Job에 어떤 Step들이 있었고, Step들 중 성공한 Step과 실패한 Step들은 어떤 것들이 있는지
+
+이 외에 Batch 어플리케이션을 운영하기 위한 메타데이터를 여러 테이블에 나누어 저장함
+[Metadata](../../images/spring-batch/metadata-tables.png)
+
+- 기본적으로 H2 DB를 사용할 경우엔 해당 테이블을 Boot가 실행 시 자동으로 생성해줌
+- MySql이나 Oracle은 개발자가 직접 생성
+  - 스키마는 Spring batch에 이미 존재
+
 
