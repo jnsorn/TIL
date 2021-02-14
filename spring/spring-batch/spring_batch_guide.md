@@ -1,6 +1,8 @@
-> 1. Spring Batch 가이드 - 배치 어플리케이션이란?  [(기억보단 기록을)](https://jojoldu.tistory.com/324?category=902551)
+> 정리의 모든 내용은 [기억보단 기록을](https://jojoldu.tistory.com/324?category=902551) 블로그를 참고하였습니다. 
 
-### 배치 애플리케이션의 조건
+# 1. 배치 어플리케이션이란?  
+
+## 배치 애플리케이션의 조건
 
 - `대용량 데이터` : 대량의 데이터를 가져오거나, 전달하거나, 계산하는 등의 처리를 할 수 있어야 합니다.
 - `자동화` : 심각한 문제 해결을 제외하고는 사용자 개입 없이 실행되어야 합니다.
@@ -30,7 +32,7 @@
 - 따라서 둘이 조합해서 많이 사용함
 - 정해진 스케줄마다 Quartz가 Spring Batch를 실행하는 구조
 
-> 2. Spring Batch 가이드 - Batch Job 실행해보기 [(기억보단 기록을)](https://jojoldu.tistory.com/325?category=902551)
+# 2. Batch Job 실행해보기 
 
 ## Batch Job
 
@@ -56,10 +58,9 @@
 - MySql이나 Oracle은 개발자가 직접 생성
     - 스키마는 Spring batch에 이미 존재 (schema-mysql.sql)
 
-> 3. Spring Batch 가이드 - 메타테이블 엿보기 [(기억보단 기록을)](https://jojoldu.tistory.com/326?
-     > category=902551)
+# 3. 메타테이블 엿보기 
 
-### BATCH_JOB_INSTANCE
+## BATCH_JOB_INSTANCE
 
 - Job Parameter에 따라 생성되는 테이블
     - Job Parameter : Spring Batch가 실행될 때 외부에서 받을 수 있는 파라미터
@@ -69,19 +70,18 @@
 - JOB_INSTANCE_ID : BATCH_JOB_INSTANCE 테이블의 PK
 - JOB_NAME : 수행한 Job Name
 
-### BATCH_JOB_EXECUTION
+## BATCH_JOB_EXECUTION
 
 - JOB_EXECUTION과 JOB_INSTANCE는 부모-자식 관계
 - JOB_EXECUTION은 자신의 부모 JOB_INSTANCE가 성공/실패했던 모든 내역을 갖고 있음
 
-> 4. Spring Batch 가이드 - Spring Batch Job Flow [(기억보단 기록을)](https://jojoldu.tistory.com/328?
-     > category=902551)
+# 4. Spring Batch Job Flow
 
 - Step: 실제 Batch 작업을 수행하는 역할
 - Next를 이용해 Step의 순서를 제어할 수 있음
 - 앞의 Step에서 오류가 나면 뒤에 있는 step들은 실행되지 못함
 
-### 조건별 흐름 제어(Flow)
+## 조건별 흐름 제어(Flow)
 
 - on()
     - 캐치할 **ExitStatus** 지정
@@ -96,18 +96,51 @@
     - end는 FlowBuilder를 반환하는 end와 FlowBuilder를 종료하는 end 2개가 있다.
     - FlowBuilder를 반환하는 end 사용시 계속해서 from을 이어갈 수 있다. 
 
-### Batch Status vs Exit Status
+## Batch Status vs Exit Status
 - Spring Batch는 기본적으로 ExitStatus의 exitCode는 BatchStatus와 같도록 설정이 되어 있음
 
-#### BatchStatus 
+### BatchStatus 
 - Job 또는 Step의 실행 결과를 Spring에서 기록할 때 사용하는 Enum
 - COMPLETED, STARTING, STARTED, STOPPING, STOPPED, FAILED, ABANDONED, UNKNOWN
 
-#### ExitStatus
+### ExitStatus
 - Step의 실행 후 상태
 
-### Decide
+## Decide
 - 위의 방식대로 분기처리를 할 경우 문제점
     - Step이 담당하는 역할이 2개 이상이 됨(로직, 분기처리를 위한 ExitStatus 조작)
     - 다양한 분기 로직 처리의 어려움(Listener를 생성해야함)
 - `JobExecutionDecider` : Step들의 Flow속에서 분기만 담당하는 타입
+
+# 5. Spring Batch Scope & Job Parameter
+
+## JobParameter와 Scope
+
+- `Job Parameter`: 외부 혹은 내부에서 파라미터를 받아 여러 Batch 컴포넌트에서 사용할 수 있게 지원함 
+- Job Parameter를 사용하기 위해 Spring Batch 전용 Scope를 선언해야함 
+    - @StepScope
+    - @JobScope
+- 사용법 : `@Value("#{jobParameters[파라미터명]}")`
+- 타입 : Double, Long, Date, String
+- 주의
+  - @StepScope, @JobScope Bean을 생성할 때만 Job Parameters가 생성되기 때문에 사용할 수 있음
+## StepScope와 JobScope
+- 해당 어노테이션을 사용하면 Bean의 생성 시점을 지정된 Scope가 실행하는 시점으로 지연시킴
+  - Spring Batch가 Spring 컨테이너를 통해 지정된 Step/Job의 실행시점에 해당 컴포넌트를 Spring Bean으로 생성하게 함
+  - 장점
+    - JobParameter의 Late Binding이 가능
+    - 동일한 컴포넌트를 병렬 혹은 동시에 사용할 때 유용
+  
+
+### StepScope
+- Tasklet이나 ItemReader, ItemWriter, ItemProcessor에서 사용 가능
+
+### JobScope 
+- Step 선언문에서 사용 가능
+
+## JobParameter vs 시스템 변수
+
+- 시스템 변수를 사용할 경우 Spring Batch의 Job Parameter 관련 기능을 못쓰게 됨
+- Spring Batch에서 자동으로 관리해주는 Parameter 관련 메타 테이블이 관리되지 않음 
+
+
