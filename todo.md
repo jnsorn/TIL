@@ -25,14 +25,20 @@
   [(링크)](https://www.youtube.com/watch?v=BnS6343GTkY&t=166s&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9CTech)
 - [ ] 우아한객체지향 - 우아한테크세미나 조영호님
   [(링크)](https://www.youtube.com/watch?v=dJ5C4qRqAgA&a)
-  
-### 강의 
+
+### 강의
+
 - 백엔드 기준 들으면 좋은 수업들
-  - [ ] [스프링-핵심-원리-기본편](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8#)
-  - [ ] [http-웹-네트워크](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC#)
-  - [ ] [ORM-JPA-Basic](https://www.inflearn.com/course/ORM-JPA-Basic)
-  - [ ] [스프링부트-JPA-활용-1](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-%ED%99%9C%EC%9A%A9-1)
-  - [ ] [스프링부트-JPA-API개발-성능최적화](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-API%EA%B0%9C%EB%B0%9C-%EC%84%B1%EB%8A%A5%EC%B5%9C%EC%A0%81%ED%99%94#)
-  - [ ] [스프링-데이터-JPA-실전](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%8D%B0%EC%9D%B4%ED%84%B0-JPA-%EC%8B%A4%EC%A0%84#)
-  - [ ] [Querydsl-실전](https://www.inflearn.com/course/Querydsl-%EC%8B%A4%EC%A0%84#)
-  - [ ] [intellij-guide](https://www.inflearn.com/course/intellij-guide)
+    - [ ] [스프링-핵심-원리-기본편](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8#)
+    - [ ] [http-웹-네트워크](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC#)
+    - [ ] [ORM-JPA-Basic](https://www.inflearn.com/course/ORM-JPA-Basic)
+    - [ ] [스프링부트-JPA-활용-1](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-%ED%99%9C%EC%9A%A9-1)
+    - [ ] [스프링부트-JPA-API개발-성능최적화](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-API%EA%B0%9C%EB%B0%9C-%EC%84%B1%EB%8A%A5%EC%B5%9C%EC%A0%81%ED%99%94#)
+    - [ ] [스프링-데이터-JPA-실전](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%8D%B0%EC%9D%B4%ED%84%B0-JPA-%EC%8B%A4%EC%A0%84#)
+    - [ ] [Querydsl-실전](https://www.inflearn.com/course/Querydsl-%EC%8B%A4%EC%A0%84#)
+    - [ ] [intellij-guide](https://www.inflearn.com/course/intellij-guide)
+
+### 공식문서
+
+- Apache Kafka 공식 레퍼런스 한글 번역 [(링크)](https://godekdls.github.io/Apache%20Kafka/design/)
+- Spring Batch 공식 레퍼런스 한글 번역 [(링크)](https://godekdls.github.io/Spring%20Batch/contents/)
