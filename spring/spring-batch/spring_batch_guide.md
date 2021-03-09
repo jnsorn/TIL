@@ -168,6 +168,4 @@
 
 ## Page Size vs Chunk Size
 - Chunk Size : 한 번에 처리될 트랜잭션 단위
-- Page Size : 한 번에 조회할 Item의 양 
-
-
+- Page Size : 한 번에 조회할 Item의 양
